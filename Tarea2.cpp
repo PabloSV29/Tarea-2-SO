@@ -6,6 +6,7 @@
 #include <chrono>
 #include <ctime>
 #include <fstream>
+#include <atomic>
 
 using namespace std;
 
