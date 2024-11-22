@@ -83,9 +83,7 @@ void productor(Monitor_circular &monitor, int ident, atomic<bool> &termino)
     {
         int x = rand() % 100 + 1; // Asigna un valor para el item
         monitor.agregar(x);
-        // No se si es necesario esta parte
-        int espera = rand() % 901 + 100; // Esperamo
-        this_thread::sleep_for(chrono::milliseconds(espera));
+      
     }
 }
 void consumidor(Monitor_circular &monitor, int ident, atomic<bool> &termino, int tiempo_limite)
